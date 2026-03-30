@@ -1,15 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink:wght@100..900&family=Bitcount+Prop+Double:wght@100..900&family=Bitcount+Prop+Single:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!--Linked css style sheet and google font. Learned how to make fonts load more efficiently through google embed instructions,
+    and how to include font family in one link to make everything more concise.-->
+        <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <title>Document</title>
+    <!-- Added favicon through instructions on website.-->
 </head>
+
 <body>
-    <h1>My website is live!!</h1>
+<header>
+<img class="cropphoto" src="images/star.png" alt="clouds">
+
+    <h1>✧*̥˚ INTERACTIVE MEDIA *̥˚✧</h1>
+
+<nav>
+    <a href="#section1/"style="color:purple; font-weight:500;">FIRST IMPRESSIONS</a>
+    <a href="#section2"style="color:purple;font-weight:500;">THE WEBSITE AS AN EXPERIENCE</a>
+    <a href="#section3"style="color:purple;font-weight:500;">OTHER REFERENCES & FINAL THOUGHTS</a>
+</nav>
+
+<p class="intro">
+    RESPONDING TO
+    <a href="https://palat2023.com/" class="highlight-link">
+    PALAT'S WEBSITE!
+    </a>
+    </p>
+<!--I asked ChatGPT how I could better reorganise my code, which advised me to use more semantic elements over divs (which I was mainly relying on to organise things instead), and to use less inline CSS, so I reorganised most of my styling too.-->
+</header>
+
+<main>
+    <section id="section1">
+        <h2>First Impressions</h2>
+    <p style="text-align:left;">
+        When first interacting with the experience, the most conspicuous element was the use of colour - incredibly saturated, bold and conflicting. Following this, it's difficult not to notice how these colours shift around and take over different areas in response to the cursor's movement around the webpage.</p>
+    <p style="text-shadow: 0 0 2px white; font-size:25px;">
+        MY EXPERIENCE WENT A LITTLE LIKE THIS...</p>
+
+    <div class= "grid">
+        <div class="box">1. Interacted with cursor and saw how colours changed in response݁ ₊⊹ ݁</div>
+        <div class="box">2. Scrolled down webpage</div>
+        <div class="box">3. Interacted with text and activities</div>
+        <div class="box">4. Clicked links</div>
+        <!--Wanted to have some more visual variation throughout my website instead of just writing paragraphs of questions, so I seperated my actions when experiencing the website into a neat grid of boxes.-->
+    </div>
+
+    <img src="images/arrow-pointing-to-down.png" alt="arrow" style="width:100px; margin:auto; padding:20px 10px; display:block;">
+
+    <p style="text-align: left;">
+        While almost every element on this website provided some form of <a href="https://palat2023.com/" style="color:black; text-shadow: 0 0 40px;font-family: Bitcount Prop Double; font-size:25px;">INTERACTIVITY</a> in response to the user's cursor, I spent the most time interacting with the largest elements - the content at the top of the page, watching how the colours and select words transformed in response to the location of my cursor, and the "pixel displacement effect".</p>
+    <hr>
+</section>
+
+<section id="section2">
+    <h2>THE WEBSITE AS AN EXPERIENCE</h2>
+    <p style="text-align:left;">Unlike other websites, where I would probably have some sort of a sense of direction, searching for links or information and being particular with how I navigated content, I found that my most common action was simply moving my cursor all around across the page. Perhaps this is apart of the website's notion of embracing art in web design. It's all about the experience, what it makes you feel and do, the freedom it gives you, as the user, before you even realise it.</p>
+    <p>The purpose of this website is to make a statement, not only through words.</p>
+    <hr>
+    <div class= "grid2">
+        <div class="box">1. Variable landing page - up to user݁ ₊⊹ ݁</div>
+        <div class="box">2.݁ ₊⊹ ݁ </div>
+        <div class="box">3.݁ ₊⊹ ݁ </div>
+        <div class="box">4.݁ ₊⊹ ݁ </div>
+        <!--Wanted to have some more visual variation throughout my website instead of just writing paragraphs of questions, so I seperated my actions when experiencing the website into a neat grid of boxes.-->
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>By Ellyn Ioannou</p>
+</footer>
+
 </body>
 </html>

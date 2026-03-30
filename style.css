@@ -1,0 +1,124 @@
+html {
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height: 180vh;
+    background:linear-gradient(to bottom, #000000, #3B0047, #6b9dc9 );
+    /*Learned background gradient and height through w3schools.*/
+}
+
+header{
+    text-align: center;
+}
+
+nav{
+    font-family: "Bitcount Prop Double";
+    display: flex;
+    justify-content: space-evenly;
+    gap:30px;
+    margin: 0 auto;
+    padding:5px;
+    font-size:25px;
+    background-color:rgb(255, 232, 236); opacity: 60%;
+    height:30px;
+    color:black
+}
+
+main{
+    padding:5px;
+}
+
+p {
+    font-family: "Bitcount Prop Single";
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+    text-shadow: 0 0 4px black;
+    text-align: center;
+    width:1000px;
+    margin: auto;
+    padding: 10px 0;
+}
+h1 {
+    font-family: "Bitcount Prop Double";
+    color:white;
+    font-size: 70px;
+    text-shadow: 0 0 20px lightpink;
+    font-weight: 400;
+    background-color:rgba(153,50,204, 0.1);
+    padding-bottom: 45px;
+    height:60px;
+    border: solid white;
+    border-width:5px;
+    margin:auto;
+}
+
+h2 {
+    font-family: "Bitcount Prop Double";
+    color: white;
+    font-size: 50px;
+    text-shadow: 0 0 5px lightpink;
+    font-weight: 400;
+    background-color: black;
+    width:1000px;
+    height:55px;
+    margin: auto;
+    border-radius: 30px;
+    border:solid white;
+    border-width:2px;
+    text-align: center;
+}
+
+hr {
+    width: 1200px;
+    margin: 15px auto;
+}
+
+.cropphoto{
+    display:block;
+    margin:0 auto;
+    width:1550px;
+    height:255px;
+    object-fit:cover;
+    object-position:top;
+}
+
+.intro{
+    font-size: 25px;
+    padding-top:20px;
+}
+
+.highlight-link{
+    color:rgb(255,181,181);
+    text-shadow: 0 0 15px white;
+}
+
+.grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2,400px);
+    margin: 0 auto;
+    gap: 20px; 
+}
+
+.box {
+    background: white;
+    font-weight:600;
+    opacity: 0.4;
+    padding: 20px; 
+    text-align: center;
+    font-family: "Bitcount Prop Double";
+    border-radius: 20px;
+    border-style: solid;
+    border-color:black; 
+    font-size:20px;
+}
+
+.grid2 {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(1,800px);
+    margin: 0 auto;
+    gap: 20px; 
+}
