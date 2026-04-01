@@ -74,7 +74,7 @@ h2 {
     text-shadow: 0 0 5px lightpink;
     font-weight: 400;
     background-color: black;
-    width:1100px;
+    width:1250px;
     height:55px;
     margin: auto;
     margin-bottom: 10px;
@@ -101,6 +101,11 @@ hr {
     margin: 15px auto;
 }
 
+img{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
 .cropphoto{
     display:block;
     margin:0 auto;
@@ -124,10 +129,17 @@ hr {
 .grid {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(2,400px);
+    grid-template-columns: repeat(2,600px);
     margin: 0 auto;
     gap: 20px; 
 }
+
+.textwithphoto {
+    display: flex;
+    gap: 20px; 
+    align-items:flex-start;
+}
+
 
 .box {
     background: rgba(231, 217, 255, 0.562);
@@ -137,21 +149,71 @@ hr {
     font-family: "Bitcount Prop Double";
     border-radius: 20px;
     border-style: solid;
-    border-color:black; 
-    font-size:20px;
+    border:dotted white;
+    font-size:18px;
+    font-weight:6500
 }
 
+.box img{
+    width:300px;
+    height:auto;
+    border-radius:40px;
+    border: solid white
+}
 .grid2 {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(1,800px);
+    grid-template-columns: repeat(1,1000px);
     margin: 0 auto;
     gap: 20px; 
 }
 
-.image {
+.imagebox2{
+    display: flex;
+    justify-content:center;
+}
+
+.imagebox2 img{
+    width:600px;
+    height:auto;
+    padding:10px;
+}
+
+.imagebox3{
+    display: flex;
+    justify-content:center;
+}
+
+.imagebox3 img{
+    width:400px;
+    height:auto;
+    padding:10px;
+}
+
+.imagebox4{
+    display: flex;
+    justify-content:center;
+}
+
+.imagebox4 img{
+    width:200px;
+    height:auto;
+    padding:10px;
+}
+
+.imagebox1,
+.imagebox2,
+.imagebox4 {
+    flex-wrap:wrap;
+}
+
+.fullimage{
+    display: flex;
+    justify-content:center;
+}
+.fullimage img{
+    width:1000px;
+    height:auto;
+    padding:10px;
     display:block;
-    margin:0 auto;
-    width:800px;
-    padding: 20px;
 }
