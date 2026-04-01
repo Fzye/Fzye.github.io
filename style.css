@@ -3,9 +3,9 @@ html {
 }
 
 body{
-    min-height: 229vh;
+    min-height: 200vh;
     background:linear-gradient(to bottom, #000000, #3B0047, #6b9dc9 );
-    /*Learned how to implement a background gradient and height through w3schools. I specifically wanted to go with some sort of a galaxy/relaxed night theme with my website, and went through a couple of colour variations until I got something I wanted.*/
+    /*Learned how to implement a background gradient and height through W3schools. I specifically wanted to go with some sort of a galaxy/relaxed night theme with my website, and went through a couple of colour variations until I got something I wanted.*/
 }
 
 header{
@@ -28,7 +28,7 @@ nav{
     height:30px;
     color:black
 }
-
+/*Added a nav bar to give the website a more professional structure and variation between elements. It was also a simple way to demonstrate my knowledge of links, and add more of an artistic personality with my exotic heading font which I couldn't use for generic text. Experimented with borders,text shadows and font size to create contrast and seperate the header from other content, as with my main title.*/
 nav a{
     flex: 1;
     text-align:center;
@@ -50,7 +50,8 @@ p {
     margin: auto;
     gap:20px;
     padding: 10px 20px;
-    background-color: rgb(99, 35, 129, 0.4)
+    background-color: rgb(99, 35, 129, 0.4);
+    margin-bottom:10px;
 }
 
 h1 {
@@ -151,7 +152,7 @@ img{
     border-style: solid;
     border:dotted white;
     font-size:18px;
-    font-weight:6500
+    font-weight:450
 }
 
 .box img{
