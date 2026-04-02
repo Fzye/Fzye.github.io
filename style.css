@@ -28,7 +28,7 @@ nav{
     height:30px;
     color:black
 }
-/*Added a nav bar to give the website a more professional structure and variation between elements. It was also a simple way to demonstrate my knowledge of links, and add more of an artistic personality with my exotic heading font which I couldn't use for generic text. Experimented with borders,text shadows and font size to create contrast and seperate the header from other content, as with my main title.*/
+/*Nav bar to give the website a more professional and organised structure. It was also a simple way to demonstrate my knowledge of links, and add more of an artistic personality with my exotic heading font which I couldn't use for generic text. Experimented with borders,text shadows and font size to create contrast and to seperate the header from other content, as with my main title.*/
 nav a{
     flex: 1;
     text-align:center;
@@ -52,7 +52,9 @@ p {
     padding: 10px 20px;
     background-color: rgb(99, 35, 129, 0.4);
     margin-bottom:10px;
+    margin-top:10px;
 }
+/*Originally chose a font from the heading's font family for paragraphs, but was too hard to read, so went for something more legible yet similar. Made sure all paragraphs would be in line and fit under subheadings, with appropriate spacing. I had learned some more effects through w3schools.com, such as border radius and text shadow, which I used to create rounded corners, to avoid making everything look to blocky and rigid, and glowing affects across headings to support my relaxed night theme, and create contrast between headings and paragraphs. */
 
 h1 {
     font-family: "Bitcount Prop Double";
@@ -202,6 +204,7 @@ img{
     padding:10px;
 }
 
+/*Had a few image box classes depending on how many images I wanted to have in a section or row or how big I wanted them. Flex box worked better at keeping spacing variable over grid. (Thanks w3schools, again)*/
 .imagebox1,
 .imagebox2,
 .imagebox4 {
