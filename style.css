@@ -29,6 +29,9 @@ nav{
     color:black
 }
 /*Nav bar to give the website a more professional and organised structure. It was also a simple way to demonstrate my knowledge of links, and add more of an artistic personality with my exotic heading font which I couldn't use for generic text. Experimented with borders,text shadows and font size to create contrast and to seperate the header from other content, as with my main title.*/
+
+/*Asked ChatGPT 4.0 "How do I target the text within a nav box"? Learned this was pretty simple to tackle, just needed to use the nav a selector and continue as normal. */
+
 nav a{
     flex: 1;
     text-align:center;
@@ -143,6 +146,7 @@ img{
     align-items:flex-start;
 }
 
+/*Most classes used to arrange images or create small variations in text*/
 
 .box {
     background: rgba(231, 217, 255, 0.562);
@@ -154,7 +158,7 @@ img{
     border-style: solid;
     border:dotted white;
     font-size:18px;
-    font-weight:450
+    font-weight:600
 }
 
 .box img{
