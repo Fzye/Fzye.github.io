@@ -44,6 +44,7 @@ a[href]{
   padding: 20px;
   background-color: rgb(21, 8, 43);
 }
+
 .double-border {
   border: 6px double rgba(190, 161, 211);
   border-radius: 16px;
@@ -60,7 +61,7 @@ a[href]{
   border-radius: 10px;
   width:90%;
   margin: 0 auto;
-  margin-top:7px;
+  margin-top:15px;
   margin-bottom:10px;
 }
 
@@ -118,13 +119,23 @@ h2 {
 }
 
 .ambience {
-  margin-top:80px;
+  margin-top:25px;
 }
 .flex-container {
   display: flex;
   justify-content:center;
   gap:10px;
   margin-top:10px;
+}
+
+#now-playing {
+  width:100%;
+  display: flex;
+  font-size: 20px;
+  margin-left: 15px;
+  margin-top: 10px;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px rgb(255, 255, 255);
 }
 
 #progress-bar-container {

@@ -51,6 +51,8 @@ let currentSongIndex = 0;
 const myVideo = document.querySelector("#my-video");
 console.log(myVideo);
 
+const nowPlaying=document.getElementById("now-playing");
+
 const musicPlayer = document.getElementById("music-player");
 musicPlayer.volume=0.2;
 musicPlayer.addEventListener("timeupdate", updateProgress);
@@ -277,6 +279,8 @@ function startTimer(minutes) {
 
 function loadSong(index) {
   musicPlayer.src = playlist[index].src;
+
+  nowPlaying.textContent = "Now Playing" + playlist[index].title;
 
   console.log("Now Playing:",
     playlist [index].title);
