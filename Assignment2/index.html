@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink:wght@100..900&family=Bitcount+Prop+Double:wght@100..900&family=Bitcount+Prop+Single:wght@100..900&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-    <p> hello </p>
+    <style>
+    </style>
+    </head>
+    <body>
+        <div class="player-container">
+    <h1>Custom Media Player</h1>
+    <iframe id="demoVideo"
+    src="https://www.youtube.com/embed/fLsBJPlGIDU?si=msWvG9Za0ycWk9SH" 
+    title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
+
+    <div id="player">
+    </div>
+
+    <div class="controls">
+        <button id="playButton"()>
+            <img src="images/icons8-play-90.png" alt="Play"
+            width="20px" height="20px">
+        </button>
+
+        <button id="pauseButton"()>
+            <img src="images/icons8-pause-90.png" alt="Pause"
+            width="20px" height="20px">
+        </button>
+
+        <button id="fullScreenButton"()>
+            <img src="images/icons8-full-screen-90.png" alt="FullScreen"
+            width="20px" height="20px">
+        </button>
+    </div>
+</div>
+    
+
+<script>
+    const audio = new Audio ()
+    audio.src = "audio/pop.mp3"
+    const button = document.getElementById ("playButton")
+    button.onpointerdown = () => audio.play ()
+
+</script>
 </body>
 </html>

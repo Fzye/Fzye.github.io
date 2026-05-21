@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media player</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./index_files/reset.css">
+  <link rel="stylesheet" href="./index_files/style.css">
+
+  <script src="./index_files/script.js" defer=""></script>
+</head>
+
+<body>
+
+  <header>
+    <!-- <h1>My awesomest media player!!!</h1> -->
+  </header>
+
+  <div class="layout">
+
+    <main class="double-border">
+
+    <div class="title-bar">
+      <h2>✧˖°.LO-FI PLAYER</h2>
+      <p class="title-info">Music for study</p>
+      </div>
+
+      <div class="main-screen">
+        <video class="video-glow" src="index_files/Lofi1.mp4" id="my-video" muted loop>
+        </video>
+        
+        <audio id = "music-player"> </audio>
+      </div>
+
+      <div class="playlist">
+        <button class="double-border" id="stardust-vid-button">
+          AFTERNOON
+        </button>
+
+        <button class="double-border" id="zenscape-vid-button">
+          NIGHT
+        </button>
+
+        <button class="double-border" id="musicvideo-vid-button">
+          Music Video
+        </button>
+      </div>
+
+      <div class="controls">
+
+        <button id="play-pause-button" class="double-border">
+          <img src="./index_files/play--v2.png" alt="" id="play-pause-img">
+        </button>
+
+        <button id="mute-unmute-button" class="double-border">
+          <img src="./index_files/no-audio--v1.png" alt="" id="mute-unmute-img">
+        </button>
+
+        <button id="fast-forward-button" class="double-border">
+          <img src="./index_files/fast-forward.png" alt="" id="fast-forward-img">
+        </button>
+
+        <button id="shuffle-button" class="double-border">
+          <img src="./index_files/shuffle.png" alt="" id="shuffle-img">
+        </button>
+        <!-- I felt that a shuffle button would be much more fitting for my intended purpose over timestamps, especially as my visuals were unrelated to my audio and I wanted to provide the user with a wide range of music without having to list each track.-->
+
+        <!-- <button id="step1-button" class="double-border">1</button> -->
+
+        <!--<button id="step2-button" class="double-border">2</button> -->
+
+        <div id="progress-bar-container">
+          <span id="progress-bar"></span>
+        </div>
+
+        <button id="fullscreen-button" class="double-border">
+          <img src="./index_files/full-screen--v1.png" alt="" id="fullscreen-img">
+        </button>
+
+        <button id="heart-button" class="double-border">
+          <img src="./index_files/saved_resource" alt="" id="fullscreen-img">
+        </button>
+
+        <div id="likes"></div>
+
+      </div>
+
+    </main>
+
+    <aside class="sidebar double-border">
+      <h3>How long do you want to study for? </h3>
+      <button id="30-minute" class="double-border">
+        30 minutes
+      </button>
+      <button id="1-hour" class="double-border">
+        1 hour
+        when clicked, show coundown timer
+      </button>
+      <button id="2-hour" class="double-border">
+        2 hours
+      </button>
+      <div id="timer">00:00</div>
+      <hr style="margin-top: 10px;">
+      <h1>UP NEXT ♪ </h1>
+        <div class="up-next" id="up-next">
+          </div>
+<!-- Introduced a basic timer function to give the user an option to direct their focus. -->
+<div class="ambience">
+<h1> Ambience ♪ </h1>
+
+<audio id="ambience1" src="sounds/rain.wav" loop></audio>
+<audio id="ambience2" src="sounds/fireplace.wav" loop></audio>
+<audio id="ambience3" src="sounds/cafe.mp3" loop></audio>
+<audio id="ambience4" src="sounds/nature.wav" loop></audio>
+
+    <div class="flex-container">
+      <button class= "play-button flex-container" id="rain-button"
+      data-track="ambience1">
+        <img src="./index_files/rain.png" alt="" id="rain-img">
+      </button>
+
+      <button class= "play-button flex-container" id="fireplace-button" data-track="ambience2">
+        <img src="./index_files/fireplace.png" alt="" id="fireplace-img">
+      </button>
+
+      <button class= "play-button flex-container" id="cafe-button" data-track="ambience3">
+        <img src="./index_files/cafe.png" alt="" id="cafe-img">
+      </button>
+
+      <button class= "play-button flex-container" id="nature-button" data-track="ambience4">
+        <img src="./index_files/nature.png" alt="" id="nature-img">
+      </button>
+    </div>
+
+  <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
+
+<!-- I felt that with my media player intended to be for relaxation and studying, I mainly needed to prioritise audio over video, as the user would most likely not be directing their attention to whatever visuals were playing, which I decided to keep simple and repetitive as well, to avoid distraction. Thus I introduced ambience options with a slider, so the user could customise their experience depending on how they study or relax best.-->
+</div>
+    slider for volume control
+    </aside>
+
+  </div>
+
+  <footer>
+    <h3>Customise your visuals and music seperately!
+    Icons by <a href="https://icons8.com/">Icons8</a> </h3>
+  </footer>
+
+</body>
+<!-- VIDEO CREDITS:
+LOFI1: (copyright free) https://www.youtube.com/watch?v=Vv1KotyhUJo 
+make speed up directly control both video and audio playback, weather/rain icon. make video keep looping, pause when music paused.
+LOFI 2: (attribution required)https://www.vecteezy.com/video/45735088-lofi-style-loop-animation-buildings-with-cats-on-the-roofs-and-a-night-sky-full-of-stars
+LOFI 3: (attribution required) https://www.vecteezy.com/video/49534507-a-serene-forest-scene-with-glowing-flowers-the-ethereal-light-and-vibrant-colors-create-a-magical-tranquil-atmosphere-perfect-for-a-fantasy-or-nature-themed-setting
+rain sound (creative commons 0):https://freesound.org/people/speakwithanimals/sounds/525046/
+fireplace sound (creative commons 0)https://freesound.org/people/martats/sounds/138018/
+cafe sound (creative commons 0)https://freesound.org/people/mikemoons/sounds/579500/
+nature sound (attribution 4.0)https://freesound.org/people/ItsTheGoodstuff/sounds/656124/ 
+
+ALL LOFI MUSIC: ROYALTY FREE FROM https://copyrightfreelofi.com/-->
+</html>
