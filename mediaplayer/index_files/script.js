@@ -78,7 +78,7 @@
     progressBar.style.width = progress + "%";
   }
 
-  //changed the progress bar to reflect the audio rather than the video since the main focus of my player isn't on the visuals.
+  //changed the progress bar to reflect the audio rather than the video since the main focus of my player isn't on the visuals. The videos are all looping visuals so progress would be unecessary.
 
   const playPauseButton = document.querySelector("#play-pause-button");
   console.log(playPauseButton);
@@ -154,7 +154,7 @@ const reflectiveButton = document.querySelector("#reflective-vid-button");
       musicPlayer.play();
   }
 
-  //switches video source based on which button is clicked, reloads video and starts playback
+  //switches video source based on which button is clicked, reloads video and starts playback.
 
   const fullscreenButton = document.querySelector("#fullscreen-button");
   console.log(fullscreenButton);
@@ -183,7 +183,7 @@ const reflectiveButton = document.querySelector("#reflective-vid-button");
     likes++;
     likesContainer.textContent = likes;
   }
-//I ended up keeping the likes button as it still carries a relaxing/wholesome vibe which I coulnd't think of anything else for it to be replaced with.
+//I ended up keeping the likes button as it still carries a relaxing/wholesome vibe. There is still room for this to be enhanced, just that it would be too complex, but I had the idea that based on what songs are given the most liked, they will be more likely to be played near the top of the list when music is shuffled.
 
 const rewindButton = document.querySelector("#rewind-button");
 
@@ -200,7 +200,7 @@ function rewind() {
 
 //Initially had a bug which I couldn't seem to fix with this button code after changing it from a fast forward button, so I kept iterating on this function with Chatgpt (4.0) only to realise I had only uploaded changes to the javascript and not the html up until that point.
 
-//I decided a "rewind" button would be muchc more suitable for my chosen context over a fast forward button, so I ended up having the button slow the music and the visuals instead of making it faster. The user would have no reason to fast forward if they weren't watching a video, but giving them the ability to slow it down allows them to keep the music nice and slow if it is still too fast-paced for their liking. Relatively simple to avoid distraction, clicking once sets speed to 0.8, clicking again resets.
+//I decided a "rewind" button would be muchc more suitable for my chosen context over a fast forward button, so I ended up having the button slow the music and the visuals instead of making it faster. The user would have no reason to fast forward if they weren't watching a video, but giving them the ability to slow it down allows them to keep the music nice and slow if it is still too fast-paced for their liking. Relatively simple to avoid distraction, clicking once sets speed to 0.8, clicking again resets. Slowed music is often associated with giving an 'aesthetic' or 'romanticised' vibe which allows the user to attribute this to their music if desired which could make their study session more interesting.
 
 if (rewindButton) {
   rewindButton.addEventListener("click", rewind);
