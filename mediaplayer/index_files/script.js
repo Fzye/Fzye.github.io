@@ -300,7 +300,12 @@ function loadSong(index) {
 
 document.addEventListener("DOMContentLoaded", () => {
   loadSong(currentSongIndex);
+  musicPlayer.load();
   displayPlaylist();
+});
+
+musicPlayer.addEventListener("loadedmetadata", () => {
+  console.log("Audio metadata loaded");
 });
 
 function displayPlaylist() {
