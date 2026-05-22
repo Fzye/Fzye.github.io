@@ -56,6 +56,8 @@
 
   let currentSongIndex = 0;
 
+//organised playlists and video lists at the start so they can be easily referenced later
+
   const myVideo = document.querySelector("#my-video");
   console.log(myVideo);
 
@@ -75,6 +77,8 @@
     const progress = (musicPlayer.currentTime / musicPlayer.duration) * 100;
     progressBar.style.width = progress + "%";
   }
+
+  //changed the progress bar to reflect the audio rather than the video since the main focus of my player isn't on the visuals.
 
   const playPauseButton = document.querySelector("#play-pause-button");
   console.log(playPauseButton);
@@ -99,9 +103,9 @@
       playPauseImg.src = "https://img.icons8.com/ios-glyphs/30/play--v2.png";
     }
   }
-
+//play/pause button affects both audio and video, as well as the mute button later on, since the audio isn't inherely attached to any of the videos. In this case, the user doesn't really have a reason to have to control one or the other seperately.
   const VOLUME_BOOST = 1.5;
-
+//needed to amplify the audio of the ambience a bit since they were too quiet. I'm not even sure if this ended up working later on.
   const muteUnmuteButton = document.querySelector("#mute-unmute-button");
   console.log(muteUnmuteButton); 
 
@@ -120,7 +124,8 @@
     }
   }
 
-  const stardustButton = document.querySelector("#stardust-vid-button");
+//Later on I realised some of this code still existed from the previous media player, but when trying to remove some of it, it seemed to break my player, I'd already had enough issues up until this point so decided to keep it because I would have to make other changes in the html and didn't want to do something wrong
+const stardustButton = document.querySelector("#stardust-vid-button");
   console.log(stardustButton);
 
   stardustButton.addEventListener("click", function chooseVideo() {
@@ -165,7 +170,7 @@
     }
   }
 
-  //fullscreen toggle
+  //fullscreen toggle stays the same - important feature
 
   const heartButton = document.querySelector("#heart-button");
   console.log(heartButton);
@@ -193,6 +198,10 @@ function rewind() {
   musicPlayer.play();
 }
 
+//Initially had a bug which I couldn't seem to fix with this button code after changing it from a fast forward button, so I kept iterating on this function with Chatgpt (4.0) only to realise I had only uploaded changes to the javascript and not the html up until that point.
+
+//I decided a "rewind" button would be muchc more suitable for my chosen context over a fast forward button, so I ended up having the button slow the music and the visuals instead of making it faster. The user would have no reason to fast forward if they weren't watching a video, but giving them the ability to slow it down allows them to keep the music nice and slow if it is still too fast-paced for their liking. Relatively simple to avoid distraction, clicking once sets speed to 0.8, clicking again resets.
+
 if (rewindButton) {
   rewindButton.addEventListener("click", rewind);
 }
@@ -215,6 +224,8 @@ if (rewindButton) {
     musicPlayer.play();
 
   }
+
+//I needed the most help creating the shuffle button as it was very unfamilair to me. I used ChatGPT (4.0) to explain how to create an unbiased equation where every song has an equal chance of moving to a different position as I couldn't quite get it working. Afterthe playlist is shuffled it loads and plays the first item in the new order (below). I felt this was a lot more effective than allowing the user to individually choose between songs, as lofi songs are quite generic, and if they didn't like the current song, they could just shuffle the playlist.
 
   musicPlayer.addEventListener("ended", nextSong);
 
@@ -258,6 +269,8 @@ if (rewindButton) {
 
     }, 1000);
     }
+
+//Another feature that came to my mind when making the media player was the timer, especially because I still needed to fill the sidebar. I was able to make sense of the simple maths primarily through the countdown timer page on w3schools but the string I needed to display was a lot harder which I asked Chatgpt4.0 to help me with, since the symbols had to be precise.
 
   function loadSong(index) {
     musicPlayer.src = playlist[index].src;
@@ -303,6 +316,7 @@ if (rewindButton) {
   const volumeSlider = document.getElementById("volume-slider");
   const playButtons = document.querySelectorAll('.ambience .play-button');
 
+//ambience controls seperate to music. I felt that the only customisation it needed were the different ambience options and volume control, since it would be overlayed on top of the music. If they were at a fixed volume, it could be too loud or soft for the user. Ensures that only one ambient sound can play at a time from the four buttons.
   let currentAmbience = null;
 
   playButtons.forEach(button => {
