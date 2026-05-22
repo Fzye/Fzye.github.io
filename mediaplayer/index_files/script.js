@@ -43,6 +43,14 @@ const playlist = [
 {
   title: "Moonlight",
   src: "sounds/Elektra-Moon-Light.mp3"
+},
+{
+  title: "Till Next Time",
+  src:"sounds/Jake-Mercy-Till-Next-Time.mp3"
+},
+{
+  title: "Chasing You",
+  src:"sounds/LANDR-Nilix-Chasing-You-Warm-Low.mp3"
 }
 ];
 
@@ -200,15 +208,15 @@ function updateLikes() {
 
 //skips the videos to specific timestamps when buttons are clicked by setting the currentTime property of the video element
 
-const fastForwardButton = document.querySelector("#fast-forward-button");
-console.log(fastForwardButton);
+const rewindButton = document.querySelector("#rewind-button");
+console.log(rewindButton);
 
-fastForwardButton.addEventListener("click", fastForward);
+rewindButton.addEventListener("click", rewind);
 
-function fastForward() {
+function rewind() {
   if (myVideo.playbackRate === 1.0) {
-    myVideo.playbackRate = 2.0;
-    musicPlayer.playbackRate = 2.0;
+    myVideo.playbackRate = 0.8;
+    musicPlayer.playbackRate = 0.8;
   } else {
     myVideo.playbackRate = 1.0;
     musicPlayer.playbackRate = 1.0;
@@ -251,8 +259,8 @@ const timer = document.getElementById("timer");
 let countdown;
 
 document.getElementById("30-minute").onclick = () => startTimer(30);
+document.getElementById("45-minute").onclick = () => startTimer(45);
 document.getElementById("1-hour").onclick = () => startTimer(60);
-document.getElementById("2-hour").onclick = () => startTimer(120);
 
 function startTimer(minutes) {
 
@@ -280,7 +288,7 @@ function startTimer(minutes) {
 function loadSong(index) {
   musicPlayer.src = playlist[index].src;
 
-  nowPlaying.textContent = "Now Playing" + playlist[index].title;
+  nowPlaying.textContent = "Now Playing: " + playlist[index].title;
 
   console.log("Now Playing:",
     playlist [index].title);
@@ -290,7 +298,10 @@ function loadSong(index) {
   console.log("Now Playing:", playlist [index].title);
 }
 
-loadSong(currentSongIndex);
+document.addEventListener("DOMContentLoaded", () => {
+  loadSong(currentSongIndex);
+  displayPlaylist();
+});
 
 function displayPlaylist() {
   upNextContainer.innerHTML = "";
