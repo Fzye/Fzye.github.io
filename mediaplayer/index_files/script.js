@@ -216,6 +216,9 @@ function rewind() {
 
   myVideo.playbackRate = rate;
   musicPlayer.playbackRate = rate;
+
+  myVideo.play();
+  musicPlayer.play();
 }
 
 if (rewindButton) {
