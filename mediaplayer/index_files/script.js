@@ -124,25 +124,24 @@
     }
   }
 
-//Later on I realised some of this code still existed from the previous media player, but when trying to remove some of it, it seemed to break my player, I'd already had enough issues up until this point so decided to keep it because I would have to make other changes in the html and didn't want to do something wrong
-const stardustButton = document.querySelector("#stardust-vid-button");
-  console.log(stardustButton);
+const reflectiveButton = document.querySelector("#reflective-vid-button");
+  console.log(reflectiveButton);
 
-  stardustButton.addEventListener("click", function chooseVideo() {
+  reflectiveButton.addEventListener("click", function chooseVideo() {
     playVideo(0);
   });
 
-  const zenscapeButton = document.querySelector("#zenscape-vid-button");
-  console.log(zenscapeButton);
+  const atmosphericButton = document.querySelector("#atmospheric-vid-button");
+  console.log(atmosphericButton);
 
-  zenscapeButton.addEventListener("click", function chooseVideo() {
+  atmosphericButton.addEventListener("click", function chooseVideo() {
     playVideo(1);
   });
 
-  const musicVideoButton = document.querySelector("#musicvideo-vid-button");
-  console.log(musicVideoButton);
+  const calmingButton = document.querySelector("#calming-vid-button");
+  console.log(calmingButton);
 
-  musicVideoButton.addEventListener("click", function chooseVideo() {
+  calmingButton.addEventListener("click", function chooseVideo() {
     playVideo(2);
   });
 
@@ -184,6 +183,7 @@ const stardustButton = document.querySelector("#stardust-vid-button");
     likes++;
     likesContainer.textContent = likes;
   }
+//I ended up keeping the likes button as it still carries a relaxing/wholesome vibe which I coulnd't think of anything else for it to be replaced with.
 
 const rewindButton = document.querySelector("#rewind-button");
 
@@ -225,7 +225,7 @@ if (rewindButton) {
 
   }
 
-//I needed the most help creating the shuffle button as it was very unfamilair to me. I used ChatGPT (4.0) to explain how to create an unbiased equation where every song has an equal chance of moving to a different position as I couldn't quite get it working. Afterthe playlist is shuffled it loads and plays the first item in the new order (below). I felt this was a lot more effective than allowing the user to individually choose between songs, as lofi songs are quite generic, and if they didn't like the current song, they could just shuffle the playlist.
+//I needed the most help creating the shuffle button as it was very unfamilair to me. I used ChatGPT (4.0) to explain how to create an unbiased equation where every song has an equal chance of moving to a different position as I couldn't quite get it working. Afterthe playlist is shuffled it loads and plays the first item in the new order (below). I felt this was a lot more effective than allowing the user to individually choose between songs, as lofi songs are quite generic, and if they didn't like the current song, they could just shuffle the playlist. User doesn't have to do anything once they are happy with the shuffle order, as they will just play one after another, and they can focus on relaxation as there is also no option to play songs individually. 
 
   musicPlayer.addEventListener("ended", nextSong);
 
