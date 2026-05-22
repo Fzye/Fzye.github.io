@@ -25,6 +25,18 @@ h1, h2, h3 {
   font-family:"Silkscreen", sans-serif;
 }
 
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 35px;
+  padding-left:10px;
+  font-family:"Silkscreen", sans-serif;
+  text-shadow: 0 0 15px rgb(23, 0, 38);
+}
+
 a[href]{
   color:magenta;
 }
@@ -46,15 +58,14 @@ a[href]{
 }
 
 .double-border {
-  border: 6px double rgba(190, 161, 211);
+  border: 4px double rgba(190, 161, 211);
   border-radius: 16px;
   box-shadow: 0 0 2px white;
   font-family: "Geo", sans-serif;
 }
 
-
 .single-border {
-  border: 6px single rgba(190, 161, 211);
+  border: 2px solid rgba(190, 161, 211);
   border-radius: 16px;
   box-shadow: 0 0 2px white;
   font-family: "Geo", sans-serif;
@@ -95,17 +106,6 @@ video {
   border-radius: 12px;
 }
 
-h1 {
-  font-size: 28px;
-  font-weight: bold;
-}
-
-h2 {
-  font-size: 35px;
-  padding-left:10px;
-  font-family:"Silkscreen", sans-serif;
-  text-shadow: 0 0 15px rgb(23, 0, 38);
-}
 .main-screen,
 .controls {
   display: flex;
@@ -132,7 +132,6 @@ h2 {
   justify-content: space-around;
   align-items: center;
   gap: 10px;
-
   padding: 10px;
   border-bottom: 6px double rgba(103, 75, 178);
 }
@@ -152,18 +151,6 @@ h2 {
   width: 100%;
 }
 
-#volume-slider{
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  height:20px;
-  border-radius: 10px;
-  background: rgb(205, 160, 240);
-  outline: 2px solid white;
-  padding: 10px;
-  width: 100%;
-}
-
 .timer-buttons {
   display:flex;
   gap:10px;
@@ -177,6 +164,18 @@ h2 {
   border: 1px double rgb(255, 255, 255);
   border-radius: 16px;
   box-shadow: 0 0 4px;
+}
+
+#volume-slider{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height:20px;
+  border-radius: 10px;
+  background: rgb(205, 160, 240);
+  outline: 2px solid white;
+  padding: 10px;
+  width: 100%;
 }
 
 #change-visuals {

@@ -76,8 +76,6 @@
     progressBar.style.width = progress + "%";
   }
 
-  //visually updates progress bar width by calculating how far the user is through audio
-
   const playPauseButton = document.querySelector("#play-pause-button");
   console.log(playPauseButton);
 
@@ -102,8 +100,6 @@
     }
   }
 
-  //adds a click handler to control playback
-
   const VOLUME_BOOST = 1.5;
 
   const muteUnmuteButton = document.querySelector("#mute-unmute-button");
@@ -123,8 +119,6 @@
       muteUnmuteImg.src = "https://img.icons8.com/ios-glyphs/30/high-volume--v2.png";
     }
   }
-
-  //mute/unmute toggle function toggles sound on and off by checking if the video is muted and updates icons
 
   const stardustButton = document.querySelector("#stardust-vid-button");
   console.log(stardustButton);
@@ -185,28 +179,6 @@
     likes++;
     likesContainer.textContent = likes;
   }
-
-  //heart counter responds to clicks by incrementing a like counter and updating the display
-
-  //const step1Button = document.querySelector("#step1-button");
-  //console.log(step1Button)
-
-  //step1Button.addEventListener("click", gotoStep1);
-
-  //function gotoStep1() {
-  //  myVideo.currentTime = 16.0;
-  //}
-
-  //const step2Button = document.querySelector("#step2-button");
-  //console.log(step2Button);
-
-  //step2Button.addEventListener("click", gotoStep2);
-
-  //function gotoStep2() {
-  // myVideo.currentTime = 43.0;
-  //}
-
-  //skips the videos to specific timestamps when buttons are clicked by setting the currentTime property of the video element
 
 const rewindButton = document.querySelector("#rewind-button");
 
@@ -327,7 +299,6 @@ if (rewindButton) {
       upNextContainer.appendChild(songDiv);
     });
   }
-  //music player with a playlist of tracks, each track has a title and source file
 
   const volumeSlider = document.getElementById("volume-slider");
   const playButtons = document.querySelectorAll('.ambience .play-button');
@@ -352,5 +323,3 @@ if (rewindButton) {
       currentAmbience.volume = Math.min (volumeSlider.value * VOLUME_BOOST,1);
     }
   });
-
-  //fastforward toggle function checks current playback speed and toggles between normal and double speed when button is clicked
