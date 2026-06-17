@@ -4,75 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-
-        .button_container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height:100vh;
-        }
-
-        #example_button {
-            background-color: hotpink;
-            transition: transform 6s ease, background-color 1s ease, scale 1s ease;
-            border-radius: 20px;
-            border:none;
-            color: whitesmoke;
-            width: 600px;
-            height:200px;
-            font-size: 6rem;
-        }
-
-        #example_button:hover {
-            background-color: lightblue;
-            transform: rotate(720deg) scale(0.5);
-        }
-
-        @keyframes duckAnimation {
-            0% {
-                transform: translate(0, 0);
-            }
-            25% {
-                transform: translate(100vh, 0);
-            }
-            50% {
-                transform: translate(100vh, 40vh);
-            }
-            75% {
-                transform: translate(0, 40vh );
-            }
-            100% {
-                transform: translate(0, 0);
-            }
-        }
-
-        #duck_container{
-            position:absolute;
-            top:25vh;
-            left:50vh;
-            animation: duckAnimation 4s infinite alternate;
-        }
-
-        #duck{
-            width:100px;
-            height:100px;
-            transition: transform 1s ease;
-        }
-
-        #duck:hover {
-            transform: scale(5);
-        }
-
-    </style>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Geo:ital@0;1&family=Schoolbell&family=Shadows+Into+Light&family=Shadows+Into+Light+Two&family=Silkscreen:wght@400;700&family=Walter+Turncoat&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-    <div class="button_container">
-        <button id="example_button">TEST</button>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write Your Essay... Or Else</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="window-controls">
+        <button>✕</button>
+        <button>⛶</button>
     </div>
-    <div id="duck_container">
-        <img id="duck" src="images/duck.svg" alt="duck">
+
+    <div class="container">
+        <h1>WRITE YOUR ESSAY ... OR ELSE</h1>
+
+        <div class="editor-wrapper">
+            <textarea placeholder="Start writing..."></textarea>
+        </div>
+
+        <div class="bottom-bar">
+
+            <div class="tip-box">
+                <strong>Tip:</strong>
+                Items will regularly spawn on the page. Use them to reset the timer to save your work!
+        </div>
+
+        <div class="timer-box">
+                <span id="timer">20:00</span>
+                <div class="timer-check">✓</div>
+        </div>
+
     </div>
+
+</div>
+
+</body>
+</html>
 </body>
 </html>
