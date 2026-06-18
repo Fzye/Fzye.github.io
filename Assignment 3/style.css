@@ -6,6 +6,10 @@
 
 body {
     font-family: "Caveat Brush", cursive;
+/*Used a marker-style font to give the webpage a frantic/handwritting
+or 'rough draft' aesthetic to resonate with the user and context, (being
+an essay-writing site for procrastinators that forces/pressures the user into
+writing their essay in a short amount of time and restricting copying features) */
     min-height: 100vh;
 
     user-select: none;
@@ -38,6 +42,20 @@ body {
     height: 60px;
     padding:0;
 }
+
+.window-controls button, .spawn{
+    transition: transform 0.2s cubic-bezier(0.25,1,0.5,1);
+}
+
+.window-controls button:hover, .spawn:hover {
+    transform: translateY(-5px) scale(1.1);
+    cursor: grab;
+}
+/*hover state communicates to the user that spawned items are grabbable/moveable as well as subtle animations on active state*/
+.window-controls button:active, .spawn:active {
+    transform: translateY(2px) scale(0.95);
+    cursor: grabbing;
+}
 .timer-check {
     width: 45px; 
     height: 45px; 
@@ -64,6 +82,8 @@ body {
     background: red;
 }
 
+/*Different warning stages gradually increase uneasiness for the user as it threatens the safety of their work by gradually
+turning from green to red*/
 body{
     transition: background 15s ease;
 }
@@ -98,7 +118,7 @@ h1 {
         3px 3px 0 #000;
     margin-bottom: 20px;
 }
-
+/*Large bold heading communicates intention of the webpage without overcomplicating*/
 .editor-wrapper {
     background: #f8f5f0;
     border: 3px solid black;
@@ -132,6 +152,9 @@ textarea {
     padding: 18px 25px;
 }
 
+/*Tip box remains small and balances placement/organisation of elements on the page
+(rather than just having a timer at the bottom which would look uneven and awkward) gives users a heads 
+up on the click and drag objective and later on advises them of copying/save feature*/
 .timer-box {
     width: 250px;
     background: #f8f5f0;
